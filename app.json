@@ -1,0 +1,44 @@
+{
+  "pages":[
+      "pages/index/index",
+      "pages/prize/prize",
+      "pages/list/list"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+
+  "tabBar": {
+    "color": "#aaaaaa",  
+    "selectedColor": "#2E87E4", 
+    "backgroundColor": "#ddd", 
+    "borderStyle": "black", 
+    "position": "bottom", 
+    "list": [
+      {
+        "selectedIconPath": "images/主页.png",  
+        "iconPath": "images/主页.png",  
+        "pagePath": "pages/index/index",  
+        "text": "主页"  
+      },
+      {
+        "selectedIconPath": "images/奖品.png",
+        "iconPath": "images/奖品.png",
+        "pagePath": "pages/prize/prize",
+        "text": "奖品"
+      },
+      {
+        "selectedIconPath": "images/榜单.png",
+        "iconPath": "images/榜单.png",
+        "pagePath": "pages/list/list",
+        "text": "榜单"
+      }
+    ]
+  }
+}
