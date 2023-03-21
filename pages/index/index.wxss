@@ -1,0 +1,136 @@
+/**index.wxss**/
+page{
+    height:100%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.scroll-top{
+    background-color: #fffbd6;
+    position: fixed;
+    z-index: 2;
+  }
+
+  .msg-icon{
+    display: inline-block;
+    width: 70rpx;
+    background-color: #fffbd6;
+    z-index: 2;
+    text-align: center;
+  }
+  .notice-icon{
+    position: absolute;
+    left: 0;
+    top: 16rpx;
+  }
+  .close-icon{
+    position: absolute;
+    left: 680rpx;
+    top:16rpx;
+    padding-right: 16rpx;
+  }
+  .msg-icon>image{
+    width: 48rpx;
+    height: 48rpx;  
+  } 
+  .weui-label,.weui-input,.weui-select,.check-info-btn{
+    font-size: 30rpx;
+  }
+
+  .scrollbar{  
+    color: #e0620d;
+    white-space: nowrap;
+    font-size: 14px;
+    height: 80rpx;
+    line-height: 80rpx;
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+    background-size:100% 100%;
+    z-index: -1;
+  }
+
+  .commodity {
+    width: 100%;
+    height: 1400rpx;
+    /* position:fixed;  */
+    /* background-size:100% 100%; */
+    /* z-index: -1; */
+  }
+
+  .info1{
+    /* padding-top: 10rpx; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .info2{
+    /* padding-top: 10rpx; */
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .info3{
+    /* padding-top: 10rpx; */
+    padding-left: 150rpx;
+    padding-right: 150rpx;
+    /* padding-bottom: 50rpx; */
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .y-line1{
+    background-color:#000000;
+    width:5rpx;
+    height:40rpx;
+  }
+
+  .x-line1{
+    width:100%;
+    height:3rpx;
+    background-color:#000000;
+  }
+
+  .scenePicturesText{
+      font-size: 35px;
+      padding-left: 5%;
+  }
+
+  .scenePicturesView{
+      /* padding-top: 5%; */
+    /* justify-content: space-around; */
+  }
+  .scenePictures{
+      width:90%;
+      padding-left:5%;
+      /* padding-bottom: 5%; */
+  }
+
+  .end{
+    display: flex;
+    justify-content: space-around;
+  }
+  .qrcode{
+    height:1308rpx;
+    width:900rpx;
+  }
+  

@@ -1,0 +1,26 @@
+/* pages/list/list.wxss */
+
+
+.userInfo{
+    display: flex;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    /* justify-content: center; */
+}
+
+.userHead{
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+
+.userTextInfo{
+    padding-top: 5%;
+    padding-left:10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+
+.userText{
+    font-size:17px;
+}

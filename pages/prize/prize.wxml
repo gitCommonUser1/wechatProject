@@ -1,0 +1,6 @@
+<!--pages/prize/prize.wxml-->
+
+
+<view> 
+    <image class='background' src="/images/prize.jpg" mode="aspectFill"></image>
+</view>

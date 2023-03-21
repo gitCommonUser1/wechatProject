@@ -1,0 +1,15 @@
+<!--pages/list/list.wxml-->
+<!-- 开始 -->
+<view wx:for="{{list}}">
+<view class="userInfo"> 
+        <image class='userHead' src="{{item.userHead}}"></image>
+        <view class="userTextInfo">
+            <text class="userText">姓名：{{item.userName}}\n</text>
+            <text class="userText">编号：{{item.userNumber}}\n</text>
+            <text class="userText">热度：{{item.userFire}}\n</text>
+            <text class="userText">排名：{{item.userList}}\n</text>
+            <text class="userText">访问量：{{item.userVisit}}\n</text>
+        </view>
+</view>
+<!-- 结束 -->
+</view>
