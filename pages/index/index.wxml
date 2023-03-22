@@ -1,13 +1,5 @@
-
-<!--背景图片-->
-<view class="images">
-	<!--pics文件夹下的background.jpg文件-->
-	<image class='background' src="/images/index_background.jpg" mode="aspectFill"></image>
-	<!--页面其它部分-->
-</view>
-
-
 <view>
+
 <!-- 顶部通知栏 -->
 <view class="scroll-top" hidden="{{isHiddenMsg}}">
   <scroll-view scroll-y = true >
@@ -24,63 +16,48 @@
   </scroll-view>
 </view>
 
-<!-- 商品链接 -->
-<view> 
-    <image class='commodity' src="/images/commodity111.jpg"></image>
+<!-- 滑动窗口 -->
+<swiper indicator-dots>
+<swiper-item wx:for="{{swiperList}}">
+    <image src="{{item.imageUrl}}" bindtap="swipclick"> </image>
+</swiper-item>
+</swiper>
+
+<view class = "back1">
+<!-- 访问量、已报名 -->
+<view class="visitCount">
+已报名人数：{{visitCount}}
 </view>
 
-<!-- 访问信息 -->
-<view class = "info1">
-    <text>已报名:100 </text>
-    <view class = "y-line1"></view>
-    <text>访问人数:100 </text>
+<!-- 活动剩余时间 -->
+<view class="lastTime">
+活动剩余时间：
+<!-- 天 -->
+<view class="rect">00天</view>
+<!-- 时 -->
+<view class="rect">00时</view>
+<!-- 分 -->
+<view class="rect">00分</view>
+<!-- 秒 -->
+<view class="rect">00秒</view>
+</view>
 </view>
 
-<!-- 活动倒计时 -->
-<view class = "info2">
-<view>活动倒计时</view>
+
+<view class = "introduction">
+    <image src="/images/introduction.jpg"></image>
 </view>
 
-<!-- 倒计时时间 -->
-<view class = "info3">
-<view>0天</view>
-<view>0时</view>
-<view>0分</view>
-<view>0秒</view>
+<!-- images -->
+<view class="images">
+    <image src="/images/1.jpg"></image>
+    <image src="/images/2.jpg"></image>
+    <image src="/images/3.jpg"></image>
 </view>
 
-<!-- 分割线 -->
-<view class = "x-line1"></view>
-
-<!-- 简介 -->
-<view>
-    <image class='commodity' src="/images/introduction.jpg" mode="aspectFill"></image>
+<view class="bottomView">
+    <image src="/images/bottom.jpg"></image>
 </view>
-
-<!-- <view>
-    <text class="scenePicturesText">现场图片</text>
-</view> -->
-
-<!-- 照片,视频 -->
-<!-- <view class="scenePicturesView">
-    <image class='scenePictures' src="/images/1.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/2.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/3.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/4.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/5.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/6.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/7.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/8.jpg" mode="aspectFill"></image>
-    <image class='scenePictures' src="/images/9.jpg" mode="aspectFill"></image>
-</view> -->
-
-
-<!-- 尾巴 -->
-<view class="end">
-    <!-- <text> {结束语，结束信息，结束标志，结束通知，补齐} </text> -->
-    <image class='qrcode' src="/images/qrcode.jpg" mode="aspectFill"></image>
-</view>
-
 
 <!-- 结束 -->
 </view>

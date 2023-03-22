@@ -1,0 +1,39 @@
+/* pages/form/form.wxss */
+page{
+    height:100%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100rpx;
+
+    height:100%;
+    background-color: rgb(187, 187, 189);
+}
+
+.itemText{
+    padding-right: 30rpx;
+}
+
+.itemView{
+    display: flex;
+    align-items: center;
+    padding-bottom: 100rpx;
+  }
+
+  .input{
+  width: 200px;
+  height: 50px; 
+  border: 1px solid lightgray;
+  border-radius: 25px;
+  padding-left: 20rpx;
+  }
+
+  radio{
+      /* padding: 50rpx; */
+      padding-left: 50rpx;
+      padding-right: 50rpx;
+      padding-bottom: 50rpx;
+  }

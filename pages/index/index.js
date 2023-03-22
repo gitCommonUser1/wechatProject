@@ -13,6 +13,16 @@ Page({
         space: 30,
         // 时间间隔
         interval: 20, 
+        swiperList:[{
+            "imageUrl":"/images/commodity111.jpg"
+        },
+        {
+            "imageUrl":"/images/commodity111.jpg"
+        },
+        {
+            "imageUrl":"/images/commodity111.jpg"
+        }],
+        visitCount:20,
     },
     onLoad(){
         this.topScroll();
@@ -64,4 +74,11 @@ Page({
         }, that.data.interval);
       },
 
-    })
+      swipclick:function(e){
+        wx.navigateTo({
+          url: '/pages/class/class'
+        })
+    },
+    });
+
+    

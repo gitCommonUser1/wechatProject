@@ -1,0 +1,9 @@
+<!--pages/class/class.wxml-->
+
+<view class="class" wx:for="{{classList}}">
+
+<view class="subClass" bindtap="classclick">
+{{item.text}}
+</view>>
+
+</view>

@@ -1,41 +1,27 @@
-// pages/list/list.js
+// pages/class/class.js
 Page({
+
     /**
      * 页面的初始数据
      */
     data: {
-        list:[{
-            "userHead":"/images/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
+        classList:[{
+            "url":"",
+            "text":"课程1,点击预约"
         },
         {
-            "userHead":"/images/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
+            "url":"",
+            "text":"课程2,点击预约"
         },
         {
-            "userHead":"/images/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
+            "url":"",
+            "text":"课程3,点击预约"
         },
         {
-            "userHead":"/images/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
-        }]
+            "url":"",
+            "text":"课程4,点击预约"
+        },
+        ]
     },
 
     /**
@@ -92,5 +78,11 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    classclick:function(e){
+        wx.navigateTo({
+            url: '/pages/form/form'
+          })
     }
 })

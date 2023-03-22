@@ -60,77 +60,83 @@ page{
     height: 80rpx;
     line-height: 80rpx;
   }
-
+/* 
   .background {
     width: 100%;
     height: 100%;
     position:fixed; 
     background-size:100% 100%;
     z-index: -1;
+  } */
+
+
+  swiper{
+    height:900rpx;
+  }
+  swiper image{
+      width:100%;
+      height:100%;
   }
 
-  .commodity {
-    width: 100%;
-    height: 1400rpx;
-    /* position:fixed;  */
-    /* background-size:100% 100%; */
-    /* z-index: -1; */
+  .back1{
+      background-color: rgb(228, 233, 224);
   }
 
-  .info1{
-    /* padding-top: 10rpx; */
+  .visitCount{
+    height:100rpx;
+    font-size: 45rpx;
+    /* 水平居中 */
+    justify-content: center;
+    /* 横向布局 */
     display: flex;
-    justify-content: space-around;
+    /* 垂直居中 */
+    align-items: center;
   }
 
-  .info2{
-    /* padding-top: 10rpx; */
-    display:flex;
-    justify-content: space-around;
-  }
-
-  .info3{
-    /* padding-top: 10rpx; */
-    padding-left: 150rpx;
-    padding-right: 150rpx;
-    /* padding-bottom: 50rpx; */
-    display:flex;
-    justify-content: space-around;
-  }
-
-  .y-line1{
-    background-color:#000000;
-    width:5rpx;
-    height:40rpx;
-  }
-
-  .x-line1{
-    width:100%;
-    height:3rpx;
-    background-color:#000000;
-  }
-
-  .scenePicturesText{
-      font-size: 35px;
-      padding-left: 5%;
-  }
-
-  .scenePicturesView{
-      /* padding-top: 5%; */
+  .lastTime{
+    padding-top: 20rpx;
+    /* 水平居中 */
+    /* justify-content: center; */
     /* justify-content: space-around; */
+    justify-content: space-evenly;
+    /* 横向布局 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    font-size: 30rpx;
   }
-  .scenePictures{
-      width:90%;
-      padding-left:5%;
-      /* padding-bottom: 5%; */
+  .rect{
+      border-width: 5rpx;
+      border-color: black;
+      border-style: solid;
+      height:40rpx;
+      width:80rpx;
+      font-size: 35rpx;
+        /* 水平居中 */
+        justify-content: center;
+        /* 横向布局 */
+        display: flex;
+        /* 垂直居中 */
+        align-items: center;
   }
 
-  .end{
-    display: flex;
-    justify-content: space-around;
+  .introduction{
+      padding-top: 50rpx;
   }
-  .qrcode{
-    height:1308rpx;
-    width:900rpx;
+  .introduction image{
+      height:1000rpx;
+      width:100%;
   }
-  
+
+  .images{
+      /* height:500rpx; */
+  }
+  .images image{
+    height:500rpx;
+    width:100%;
+  }
+
+  .bottomView image{
+    height:180rpx;
+    width:100%;
+  }

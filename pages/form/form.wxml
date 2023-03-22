@@ -1,0 +1,24 @@
+<!--pages/form/form.wxml-->
+
+<view class="form">
+<view class="itemView">
+    <text class="itemText">姓 \t 名:</text>
+    <input class="input" name="userName" placeholder="请输入姓名"
+    bindinput="userNameInput"/>
+  </view>
+<view class="itemView">
+    <text class="itemText">手机号:</text>
+    <input class="input" password placeholder="请输入手机号"
+     bindinput="passWdInput" />
+  </view>
+
+<radio-group class = "sex" bindchange="bandleChange">
+  <radio color="red" value="male"> 男</radio>
+  <radio color="red" value="female"> 女</radio>
+</radio-group>
+
+<button bindtap="buttonclick">
+提交
+</button>
+
+</view>

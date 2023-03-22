@@ -1,0 +1,13 @@
+/* pages/class/class.wxss */
+
+.class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100rpx;    
+}
+
+.subClass{
+    height:300rpx;
+    background-color: rgb(218, 226, 188);
+}

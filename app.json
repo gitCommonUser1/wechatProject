@@ -2,12 +2,14 @@
   "pages":[
       "pages/index/index",
       "pages/prize/prize",
-      "pages/list/list"
+      "pages/list/list",
+      "pages/class/class",
+      "pages/form/form"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "攻璞艺培",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
