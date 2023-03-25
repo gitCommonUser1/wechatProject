@@ -24,20 +24,20 @@
     "position": "bottom", 
     "list": [
       {
-        "selectedIconPath": "images/主页.png",  
-        "iconPath": "images/主页.png",  
+        "selectedIconPath": "images/indexStack1.png",  
+        "iconPath": "images/indexStack1.png",  
         "pagePath": "pages/index/index",  
         "text": "主页"  
       },
       {
-        "selectedIconPath": "images/奖品.png",
-        "iconPath": "images/奖品.png",
+        "selectedIconPath": "images/indexStack2.png",
+        "iconPath": "images/indexStack2.png",
         "pagePath": "pages/prize/prize",
         "text": "奖品"
       },
       {
-        "selectedIconPath": "images/榜单.png",
-        "iconPath": "images/榜单.png",
+        "selectedIconPath": "images/indexStack3.png",
+        "iconPath": "images/indexStack3.png",
         "pagePath": "pages/list/list",
         "text": "榜单"
       }

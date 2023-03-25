@@ -5,7 +5,7 @@ Page({
      */
     data: {
         list:[{
-            "userHead":"/images/head.jpg",
+            "userHead":"http://101.42.35.137:8080/head.jpg",
             "userName":"lxx",
             "userNumber":"0",
             "userFire":"0",
@@ -13,7 +13,7 @@ Page({
             "userVisit":"0"
         },
         {
-            "userHead":"/images/head.jpg",
+            "userHead":"http://101.42.35.137:8080/head.jpg",
             "userName":"lxx",
             "userNumber":"0",
             "userFire":"0",
@@ -21,7 +21,7 @@ Page({
             "userVisit":"0"
         },
         {
-            "userHead":"/images/head.jpg",
+            "userHead":"http://101.42.35.137:8080/head.jpg",
             "userName":"lxx",
             "userNumber":"0",
             "userFire":"0",
@@ -29,7 +29,7 @@ Page({
             "userVisit":"0"
         },
         {
-            "userHead":"/images/head.jpg",
+            "userHead":"http://101.42.35.137:8080/head.jpg",
             "userName":"lxx",
             "userNumber":"0",
             "userFire":"0",

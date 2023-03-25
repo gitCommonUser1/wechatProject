@@ -14,15 +14,16 @@ Page({
         // 时间间隔
         interval: 20, 
         swiperList:[{
-            "imageUrl":"/images/commodity111.jpg"
+            "imageUrl":"http://101.42.35.137:8080/sliderWidget1.jpg"
         },
         {
-            "imageUrl":"/images/commodity111.jpg"
+            "imageUrl":"http://101.42.35.137:8080/sliderWidget2.jpg"
         },
         {
-            "imageUrl":"/images/commodity111.jpg"
+            "imageUrl":"http://101.42.35.137:8080/sliderWidget3.jpg"
         }],
         visitCount:20,
+        indexImageMax:10
     },
     onLoad(){
         this.topScroll();
@@ -80,5 +81,3 @@ Page({
         })
     },
     });
-
-    

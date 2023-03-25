@@ -15,5 +15,24 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  data:{
+      serverIp:'101.42.35.137',
+      port:8080,
+  },
+  //get image
+  getImage:function(path){
+      var app = getApp()
+      console.log(app.data.serverIp + ':' + app.data.port)
+    wx.request({
+      url: 'http://' + app.data.serverIp + ':' + app.data.port,
+      success(res){
+        // console.log(res)
+        return res
+      },
+      fail(res){
+        console.log(res)
+      }
+    })
+},
 })

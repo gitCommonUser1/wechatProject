@@ -19,7 +19,8 @@
 <!-- 滑动窗口 -->
 <swiper indicator-dots>
 <swiper-item wx:for="{{swiperList}}">
-    <image src="{{item.imageUrl}}" bindtap="swipclick"> </image>
+<!-- swipclick -->
+    <image src="{{item.imageUrl}}" bindtap="swipclick"> </image>   
 </swiper-item>
 </swiper>
 
@@ -43,27 +44,18 @@
 </view>
 </view>
 
-
 <view class = "introduction">
-    <image src="/images/introduction.jpg"></image>
+    <image src="http://101.42.35.137:8080/introduction.jpg"></image>
 </view>
 
 <!-- images -->
-<view class="images">
-    <image src="/images/1.jpg"></image>
-    <image src="/images/2.jpg"></image>
-    <image src="/images/3.jpg"></image>
+<view class="images" wx:for = "{{indexImageMax}}">
+    <image src="http://101.42.35.137:8080/indexImage{{index+1}}"></image>
 </view>
 
 <view class="bottomView">
-    <image src="/images/bottom.jpg"></image>
+    <image src="http://101.42.35.137:8080/bottom.jpg"></image>
 </view>
 
 <!-- 结束 -->
 </view>
-
-
-
-
-
-

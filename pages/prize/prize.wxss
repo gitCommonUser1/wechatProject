@@ -1,8 +1,8 @@
 /* pages/prize/prize.wxss */
 .background {
-    width: 100%;
+    width: 100%; 
     height: 100%;
     position:fixed; 
-    background-size:100% 100%;
+    background-size:100% 100%; 
     z-index: -1;
   }
