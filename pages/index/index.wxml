@@ -34,13 +34,27 @@
 <view class="lastTime">
 活动剩余时间：
 <!-- 天 -->
-<view class="rect">00天</view>
+<!-- <view class="rect">{{overDay}}天</view> -->
+<view class="rect">
+<text wx:if="{{overDay < 10}}"> 0{{overDay}}天 </text>
+<text wx:else="{{overDay >= 10}}"> {{overDay}}天 </text>
+</view>
 <!-- 时 -->
-<view class="rect">00时</view>
+<view class="rect">
+<text wx:if="{{overHour < 10}}"> 0{{overHour}}时 </text>
+<text wx:else="{{overHour >= 10}}"> {{overHour}}时 </text>
+</view>
 <!-- 分 -->
-<view class="rect">00分</view>
+<view class="rect">
+    <text wx:if="{{overMinute < 10}}"> 0{{overMinute}}分 </text>
+    <text wx:else="{{overMinute >= 10}}"> {{overMinute}}分 </text>
+</view>
 <!-- 秒 -->
-<view class="rect">00秒</view>
+<view class="rect">
+    <text wx:if="{{overSecond < 10}}"> 0{{overSecond}}秒 </text>
+    <text wx:else="{{overSecond >= 10}}"> {{overSecond}}秒 </text>
+</view>
+
 </view>
 </view>
 
