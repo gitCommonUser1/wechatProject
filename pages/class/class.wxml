@@ -1,9 +1,12 @@
 <!--pages/class/class.wxml-->
 
-<view class="class" wx:for="{{classList}}">
-
-<view class="subClass" bindtap="classclick">
-{{item.text}}
-</view>>
-
+<view>
+<image class = "background" src="http://101.42.35.137:8080/background.png"></image>
 </view>
+<view class ="top">
+</view>
+<view class="class" wx:for="{{classList}}">
+<view class="subClass" bindtap="classclick">
+<image src="{{item.url}}"></image>
+</view>
+</view> 

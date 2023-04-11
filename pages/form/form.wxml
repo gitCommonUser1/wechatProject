@@ -1,4 +1,9 @@
 <!--pages/form/form.wxml-->
+<view>
+<image class = "background" src="http://101.42.35.137:8080/background.png"></image>
+</view>
+
+<form bindsubmit="formSubmit">
 
 <view class="form">
 <view class="itemView">
@@ -8,17 +13,23 @@
   </view>
 <view class="itemView">
     <text class="itemText">手机号:</text>
-    <input class="input" password placeholder="请输入手机号"
+    <input class="input" name="telephone" placeholder="请输入手机号"
      bindinput="passWdInput" />
   </view>
 
-<radio-group class = "sex" bindchange="bandleChange">
+<radio-group class = "sex" bindchange="bandleChange" name="sex">
   <radio color="red" value="male"> 男</radio>
   <radio color="red" value="female"> 女</radio>
 </radio-group>
 
-<button bindtap="buttonclick">
+<button form-type="submit">
 提交
 </button>
 
+<!-- <button open-type="getPhoneNumber" type="primary" bindgetphonenumber="getPhoneNumber">
+sss
+</button> -->
+
 </view>
+
+</form>

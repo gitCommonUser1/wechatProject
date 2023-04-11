@@ -10,7 +10,6 @@ page{
     padding-top: 100rpx;
 
     height:100%;
-    background-color: rgb(187, 187, 189);
 }
 
 .itemText{
@@ -36,4 +35,8 @@ page{
       padding-left: 50rpx;
       padding-right: 50rpx;
       padding-bottom: 50rpx;
+  }
+
+  button{
+    background-color:rgb(0, 119, 119);
   }

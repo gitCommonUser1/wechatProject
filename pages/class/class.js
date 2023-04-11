@@ -6,20 +6,16 @@ Page({
      */
     data: {
         classList:[{
-            "url":"",
-            "text":"课程1,点击预约"
+            "url":"http://101.42.35.137:8080/piano.jpg",
+            "text":"舞蹈类"
         },
         {
-            "url":"",
-            "text":"课程2,点击预约"
+            "url":"http://101.42.35.137:8080/piano.jpg",
+            "text":"乐器类"
         },
         {
-            "url":"",
-            "text":"课程3,点击预约"
-        },
-        {
-            "url":"",
-            "text":"课程4,点击预约"
+            "url":"http://101.42.35.137:8080/piano.jpg",
+            "text":"文化科技类"
         },
         ]
     },
@@ -81,6 +77,8 @@ Page({
     },
 
     classclick:function(e){
+        
+
         wx.navigateTo({
             url: '/pages/form/form'
           })

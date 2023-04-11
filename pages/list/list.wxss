@@ -1,7 +1,7 @@
 /* pages/list/list.wxss */
 
 .listView{
-    background-color: rgb(179, 209, 230);   
+    /* background-color: rgb(179, 209, 230);    */
 }
 
 .userInfo{

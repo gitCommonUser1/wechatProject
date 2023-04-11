@@ -1,6 +1,11 @@
 /* pages/class/class.wxss */
 
+.top{
+    padding-bottom: 100rpx;
+}
+
 .class{
+    /* padding-top: 100rpx; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,6 +13,14 @@
 }
 
 .subClass{
-    height:300rpx;
-    background-color: rgb(218, 226, 188);
+    /* height:600rpx; */
+    /* width:600rpx; */
+    /* border-radius: 50rpx; */
+    /* background-color: rgb(226, 200, 127); */
+    /* display: flex;    设置显示样式* */
+    /* align-items: center;    *子view垂直居中 */
+    /* vertical-align: center; *垂直居中 */
+    /* justify-content: center; *内容居中 */
+    /* flex-direction:row;  */
+    /* font-size: 100rpx; */
 }

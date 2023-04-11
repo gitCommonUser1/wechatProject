@@ -4,45 +4,22 @@ Page({
      * 页面的初始数据
      */
     data: {
-        list:[{
-            "userHead":"http://101.42.35.137:8080/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
-        },
-        {
-            "userHead":"http://101.42.35.137:8080/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
-        },
-        {
-            "userHead":"http://101.42.35.137:8080/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
-        },
-        {
-            "userHead":"http://101.42.35.137:8080/head.jpg",
-            "userName":"lxx",
-            "userNumber":"0",
-            "userFire":"0",
-            "userList":"0",
-            "userVisit":"0"
-        }]
+        list:[{}],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.getList((result)=>{
+            for(var i = 0;i < result.length;++i){
+                // list
+                this.setData({['list[' + i + '].userName']:result[i].name})
+                this.setData({['list[' + i + '].userFire']:result[i].fire})
+                this.setData({['list[' + i + '].userList']:i+1})
+                this.setData({['list[' + i + '].userHead']:"http://101.42.35.137:8080/head.jpg"})
+            }
+        });
     },
 
     /**
@@ -92,5 +69,17 @@ Page({
      */
     onShareAppMessage() {
 
-    }
+    },
+
+    getList(callback){
+        wx.request({
+            url: 'http://101.42.35.137:8080/getList',
+            header: {
+                'content-type': 'application/json'
+              },
+            success:function(res){
+                callback(res.data);
+            }
+          })
+    },
 })

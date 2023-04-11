@@ -1,9 +1,12 @@
 <!--pages/list/list.wxml-->
+
+<view>
+<image class = "background" src="http://101.42.35.137:8080/background.png"></image>
+</view>
 <!-- 开始 -->
 <view class = "listView" wx:for="{{list}}">
 <view class="userInfo"> 
         <image class='userHead' src="{{item.userHead}}"></image>
-        <text class="userText">编号：{{item.userNumber}}\n</text>
         <text class="userText">姓名：{{item.userName}}\n</text>
         <text class="userText">热度：{{item.userFire}}\n</text>
         <text class="userText">排名：{{item.userList}}\n</text>
