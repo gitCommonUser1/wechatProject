@@ -3,38 +3,34 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.0
 
 Window {
-    width: 640
-    height: 480
+    id:root
+    width: 900
+    height: 600
     visible: true
     title: qsTr("Hello World")
 
-//    ListModel{
-//        id:fruitModel
-//        ListElement {
-//            display: "Apple"
-//        }
-//        ListElement {
-//            display: "Orange"
-//        }
-//        ListElement {
-//            display: "Banana"
-//        }
-//    }
-
-//    TableView{
-//        anchors.fill: parent
-//          columnSpacing: 1
-//          rowSpacing: 1
-//          clip: true
-
-//          model: fruitModel
-
-//          delegate: Rectangle {
-//              implicitWidth: 100
-//              implicitHeight: 50
-//              Text {
-//                  text: display
-//              }
-//          }
-//    }
+    TableView{
+        anchors.fill: parent
+        model: tableModel
+        columnSpacing: 1
+        rowSpacing: 1
+        delegate: Rectangle {
+            implicitWidth: 250
+            implicitHeight: 50
+              Text {
+                  text: {
+                      if(column == 0){
+                          name
+                      }else if(column == 1){
+                          telephone
+                      }else if(column == 2){
+                          fire
+                      }else if(column == 3){
+                          row
+                      }
+                  }
+                  font.pixelSize: 30
+              }
+        }
+    }
 }

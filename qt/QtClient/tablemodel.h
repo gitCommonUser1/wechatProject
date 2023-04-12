@@ -2,6 +2,7 @@
 #define TABLEMODEL_H
 
 #include <QObject>
+#include <QDebug>
 #include <QVariant>
 #include <QAbstractTableModel>
 #include "studentdata.h"
@@ -10,7 +11,7 @@ class TableModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    TableModel(){}
+    TableModel(QObject *parent = nullptr){}
     enum ItemRoles{
             TypeName = Qt::UserRole + 1,
             TypeTelephone,
@@ -19,20 +20,19 @@ public:
 
     int rowCount(const QModelIndex & = QModelIndex()) const override
      {
-         return 200;
+         return studentList.count();
      }
 
      int columnCount(const QModelIndex & = QModelIndex()) const override
      {
-         return 200;
+         return 4;
      }
 
      QVariant data(const QModelIndex &index, int role) const override
      {
-        if (index.row() < 0 || index.row() >= studentList.size())
-                    return QVariant();
-
-        StudentData item = studentList[index.row()].value<StudentData>();
+        if (index.row() < 0 || index.row() >= studentList.count())
+            return QVariant();
+        StudentData item = studentList[index.row()];
         if (role == TypeName)
             return item.name();
         else if (role == TypeTelephone)
@@ -56,7 +56,7 @@ signals:
 public slots:
 
 public:
-     QVariantList studentList;
+     QList<StudentData>studentList;
 };
 
 #endif // TABLEMODEL_H

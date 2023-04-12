@@ -12,11 +12,11 @@ class HttpClient : public QObject
     Q_OBJECT
 public:
     explicit HttpClient(QObject *parent = nullptr);
-    void update();
+    Q_INVOKABLE void update();
+    Q_INVOKABLE void clear();
     void setModel(TableModel *t_model){
         model = t_model;
     }
-
 signals:
 
 public slots:
@@ -24,7 +24,6 @@ public slots:
 private:
     QNetworkAccessManager *manager;
     TableModel *model;
-
 };
 
 #endif // HTTPCLIENT_H

@@ -33,17 +33,22 @@ void HttpClient::update()
        }
        else if(document.isArray()){
            QJsonArray array = document.array();
-           QVariantList list;
            for(int i = 0;i < array.size();++i){
                StudentData data;
                data.setFire(array.at(i)["fire"].toVariant());
                data.setName(array.at(i)["name"].toVariant());
-               data.setTelephone(array.at(i)["telephone"].toVariant());
-               list.append(QVariant::fromValue(data));
+               data.setTelephone(array.at(i)["phone"].toVariant());
+               model->studentList.append(data);
            }
-           //model->studentList = list;
        }
    }else{
        qDebug()<<"json error:"<<json_error.errorString();
    }
+
+   qDebug() << "update";
+}
+
+void HttpClient::clear()
+{
+    qDebug() << "clear";
 }
