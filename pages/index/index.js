@@ -30,6 +30,8 @@ Page({
         overHour:0,
         overMinute:0,
         overSecond:0,
+
+        swipCurrentIndex:0,
     },
     onLoad(){
         this.topScroll();
@@ -107,10 +109,22 @@ Page({
         }, that.data.interval);
       },
 
+      swipChanged:function(e){
+          var cur = e.detail.current
+          this.setData({
+              swipCurrentIndex : cur
+          })
+      },
       swipclick:function(e){
-        wx.navigateTo({
-          url: '/pages/class/class'
-        })
+        if(this.data.swipCurrentIndex == 0){
+            return
+        }else if(this.data.swipCurrentIndex == 1){
+            return
+        }else if(this.data.swipCurrentIndex == 2){
+            wx.navigateTo({
+                url: '/pages/videoPage/videoPage'
+              })
+        }
     },
     //获取报名人数接口
         getVisit:function(callback){

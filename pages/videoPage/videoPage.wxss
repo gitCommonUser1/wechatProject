@@ -1,0 +1,7 @@
+/* pages/videoPage/videoPage.wxss */
+
+video{
+    width: 100vw;
+    height:80vw;
+    margin-top: 300rpx;
+  }

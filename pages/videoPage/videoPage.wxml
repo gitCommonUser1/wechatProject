@@ -1,0 +1,7 @@
+<!--pages/videoPage/videoPage.wxml-->
+<!-- <text>pages/videoPage/videoPage.wxml</text> -->
+<view>
+<image class = "background" src="https://liudi0303.cloud/background.png"></image>
+</view>
+
+<video id="myVideo" src='{{src}}' ></video>

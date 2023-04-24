@@ -21,7 +21,7 @@
 </view>
 
 <!-- 滑动窗口 -->
-<swiper indicator-dots>
+<swiper indicator-dots bindchange="swipChanged" >
 <swiper-item wx:for="{{swiperList}}">
 <!-- swipclick -->
     <image src="{{item.imageUrl}}" bindtap="swipclick"> </image>   

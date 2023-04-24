@@ -4,7 +4,8 @@
       "pages/prize/prize",
       "pages/list/list",
       "pages/class/class",
-      "pages/form/form"
+      "pages/form/form",
+      "pages/videoPage/videoPage"
   ],
   "window":{
     "backgroundTextStyle":"light",
