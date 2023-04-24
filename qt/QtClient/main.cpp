@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 //    connect(manager,&QNetworkAccessManager::finished,&app,&MyClass::replyFinished);
     //发送异步get请求
     QNetworkRequest request;
-    request.setUrl(QUrl("http://101.42.35.137:8080/getList"));
+    request.setUrl(QUrl("https://liudi0303.cloud/getList"));
     request.setRawHeader("Content-Type","application/json");
     QNetworkReply *reply = manager->get(request);
     QEventLoop eventLoop;

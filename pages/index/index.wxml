@@ -1,6 +1,6 @@
 <!-- 背景 -->
 <view>
-<image class = "background" src="http://101.42.35.137:8080/background.png"></image>
+<image class = "background" src="https://liudi0303.cloud/background.png"></image>
 </view>
 
 <view>
@@ -63,16 +63,16 @@
 </view>
 
 <view class = "introduction">
-    <image src="http://101.42.35.137:8080/introduction.jpg"></image>
+    <image src="https://liudi0303.cloud/introduction.jpg"></image>
 </view>
 
 <!-- images -->
 <view class="images" wx:for = "{{indexImageMax}}">
-    <image src="http://101.42.35.137:8080/indexImage{{index+1}}"></image>
+    <image src="https://liudi0303.cloud/indexImage{{index+1}}"></image>
 </view>
 
 <view class="bottomView">
-    <image src="http://101.42.35.137:8080/bottom.jpg"></image>
+    <image src="https://liudi0303.cloud/bottom.jpg"></image>
 </view>
 
 <!-- 结束 -->

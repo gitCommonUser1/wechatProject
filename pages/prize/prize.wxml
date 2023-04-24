@@ -2,5 +2,5 @@
 
 
 <view> 
-    <image class='background' src="http://101.42.35.137:8080/prize.jpg" mode="aspectFill"></image>
+    <image class='background' src="https://liudi0303.cloud/prize.jpg" mode="aspectFill"></image>
 </view>

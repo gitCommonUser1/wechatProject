@@ -14,13 +14,13 @@ Page({
         // 时间间隔
         interval: 20, 
         swiperList:[{
-            "imageUrl":"http://101.42.35.137:8080/sliderWidget1.jpg"
+            "imageUrl":"https://liudi0303.cloud/sliderWidget1.jpg"
         },
         {
-            "imageUrl":"http://101.42.35.137:8080/sliderWidget2.jpg"
+            "imageUrl":"https://liudi0303.cloud/sliderWidget2.jpg"
         },
         {
-            "imageUrl":"http://101.42.35.137:8080/sliderWidget3.jpg"
+            "imageUrl":"https://liudi0303.cloud/sliderWidget3.jpg"
         }],
         visitCount:20,
         indexImageMax:10,
@@ -36,7 +36,8 @@ Page({
         this.getVisit((result)=>{
             this.setData({"visitCount":result})
         });
-
+        
+        // this.setData({"visitCount":3})
         // this.formatTime((day,hour,minute,second)=>{
         //     this.setData({
         //         "overDay":day,
@@ -114,7 +115,7 @@ Page({
     //获取报名人数接口
         getVisit:function(callback){
             wx.request({
-                url: 'http://101.42.35.137:8080/indexVisit',
+                url: 'https://liudi0303.cloud/indexVisit',
                 header: {
                     'content-type': 'application/json'
                   },

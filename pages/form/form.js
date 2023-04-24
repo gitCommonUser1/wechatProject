@@ -72,7 +72,7 @@ Page({
     },
     formSubmit:function(e){
         wx.request({
-            url: 'http://101.42.35.137:8080/register?userName=' + e.detail.value.userName 
+            url: 'https://liudi0303.cloud/register?userName=' + e.detail.value.userName 
             + '&telephone=' + e.detail.value.telephone + '&sex=' + e.detail.value.sex,
             // header: {
             //     "Content-Type": "application/x-www-form-urlencoded"

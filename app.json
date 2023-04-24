@@ -14,7 +14,7 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-
+  "lazyCodeLoading": "requiredComponents",
 
   "tabBar": {
     "color": "#aaaaaa",  

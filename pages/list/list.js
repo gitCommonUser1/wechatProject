@@ -17,7 +17,7 @@ Page({
                 this.setData({['list[' + i + '].userName']:result[i].name})
                 this.setData({['list[' + i + '].userFire']:result[i].fire})
                 this.setData({['list[' + i + '].userList']:i+1})
-                this.setData({['list[' + i + '].userHead']:"http://101.42.35.137:8080/head.jpg"})
+                this.setData({['list[' + i + '].userHead']:"https://liudi0303.cloud/head.jpg"})
             }
         });
     },
@@ -73,7 +73,7 @@ Page({
 
     getList(callback){
         wx.request({
-            url: 'http://101.42.35.137:8080/getList',
+            url: 'https://liudi0303.cloud/getList',
             header: {
                 'content-type': 'application/json'
               },
