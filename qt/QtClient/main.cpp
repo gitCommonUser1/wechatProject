@@ -1,10 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <QNetworkAccessManager>
-#include <QNetworkReply>
+#include <QQmlContext>
 #include <QDebug>
-#include <QJsonParseError>
-#include <QJsonObject>
+#include "httpclient.h"
+#include "tablemodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,6 +13,14 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+
+    HttpClient* client = new HttpClient();
+    TableModel *model = new TableModel();
+    client->setModel(model);
+    client->update();
+    engine.rootContext()->setContextProperty("client", client);
+    engine.rootContext()->setContextProperty("tableModel", model);
+
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
@@ -22,6 +29,7 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
     engine.load(url);
 
+<<<<<<< HEAD
 
     QNetworkAccessManager *manager = new QNetworkAccessManager(&app);
     //manager具有异步API，当http请求完成后，会通过finished信号进行通知
@@ -49,5 +57,7 @@ int main(int argc, char *argv[])
 
 
 
+=======
+>>>>>>> 7bc85bfffd38e34d3b90d820517d7228a9874319
     return app.exec();
 }

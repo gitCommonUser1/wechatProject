@@ -1,0 +1,6 @@
+﻿  httpclient.cpp
+  moc_httpclient.cpp
+main.obj : error LNK2001: 无法解析的外部符号 "public: virtual struct QMetaObject const * __cdecl TableModel::metaObject(void)const " (?metaObject@TableModel@@UEBAPEBUQMetaObject@@XZ)
+main.obj : error LNK2001: 无法解析的外部符号 "public: virtual void * __cdecl TableModel::qt_metacast(char const *)" (?qt_metacast@TableModel@@UEAAPEAXPEBD@Z)
+main.obj : error LNK2001: 无法解析的外部符号 "public: virtual int __cdecl TableModel::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@TableModel@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+debug\\QtClient.exe : fatal error LNK1120: 3 个无法解析的外部命令
