@@ -34,6 +34,10 @@
 已报名人数：{{visitCount}}
 </view>
 
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+立即报名
+</button>
+
 <!-- 活动剩余时间 -->
 <view class="lastTime">
 活动剩余时间：

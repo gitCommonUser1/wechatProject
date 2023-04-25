@@ -108,15 +108,18 @@ Page({
           }
         }, that.data.interval);
       },
-
       swipChanged:function(e){
           var cur = e.detail.current
           this.setData({
               swipCurrentIndex : cur
           })
       },
+      getPhoneNumber (e) {
+        console.log(e.detail.code)
+      },
       swipclick:function(e){
         if(this.data.swipCurrentIndex == 0){
+            
             return
         }else if(this.data.swipCurrentIndex == 1){
             return
