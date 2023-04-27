@@ -4,14 +4,14 @@
 #include <QObject>
 #include <QDebug>
 #include <QVariant>
-#include <QAbstractTableModel>
+#include <QAbstractItemModel>
 #include "studentdata.h"
 
-class TableModel : public QAbstractTableModel
+class TableModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    TableModel(QObject *parent = nullptr){}
+    TableModel(){}
     enum ItemRoles{
             TypeName = Qt::UserRole + 1,
             TypeTelephone,
@@ -21,11 +21,6 @@ public:
     int rowCount(const QModelIndex & = QModelIndex()) const override
      {
          return studentList.count();
-     }
-
-     int columnCount(const QModelIndex & = QModelIndex()) const override
-     {
-         return 4;
      }
 
      QVariant data(const QModelIndex &index, int role) const override
@@ -49,6 +44,31 @@ public:
          roles[TypeTelephone] = "telephone";
          roles[TypeFire] = "fire";
          return roles;
+     }
+
+     void remove(int index){
+         beginRemoveRows(QModelIndex(),index,index);
+         studentList.removeAt(index);
+         endRemoveRows();
+     }
+
+     void update(int index,QString fire){
+         studentList[index].setFire(fire);
+         dataChanged(this->index(index),this->index(index));
+     }
+
+     void clear(){
+         if(studentList.size() == 0)
+             return ;
+         for(int i = studentList.size() - 1;i >= 0; --i){
+             beginRemoveRows(QModelIndex(),i,i);
+             studentList.removeAt(i);
+             endRemoveRows();
+         }
+     }
+     void insert(int index){
+         beginInsertRows(QModelIndex(),index,index);
+         endInsertRows();
      }
 
 signals:

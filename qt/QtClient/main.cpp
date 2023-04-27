@@ -15,9 +15,12 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     HttpClient* client = new HttpClient();
+//    TableModel *model = new TableModel();
     TableModel *model = new TableModel();
     client->setModel(model);
     client->update();
+//    client->test();
+//    client->getPhones();
     engine.rootContext()->setContextProperty("client", client);
     engine.rootContext()->setContextProperty("tableModel", model);
 
