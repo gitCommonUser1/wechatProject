@@ -4,17 +4,20 @@
       "pages/prize/prize",
       "pages/list/list",
       "pages/class/class",
-      "pages/form/form"
+      "pages/form/form",
+      "pages/videoPage/videoPage",
+      "pages/phoneSubmit/phoneSubmit"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh":true,
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "攻璞艺培",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-
+  "lazyCodeLoading": "requiredComponents",
 
   "tabBar": {
     "color": "#aaaaaa",  

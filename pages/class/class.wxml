@@ -1,7 +1,7 @@
 <!--pages/class/class.wxml-->
 
 <view>
-<image class = "background" src="http://101.42.35.137:8080/background.png"></image>
+<image class = "background" src="https://liudi0303.cloud/background.png"></image>
 </view>
 <view class ="top">
 </view>

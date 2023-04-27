@@ -6,15 +6,15 @@ Page({
      */
     data: {
         classList:[{
-            "url":"http://101.42.35.137:8080/piano.jpg",
+            "url":"https://liudi0303.cloud/piano.jpg",
             "text":"舞蹈类"
         },
         {
-            "url":"http://101.42.35.137:8080/piano.jpg",
+            "url":"https://liudi0303.cloud/piano.jpg",
             "text":"乐器类"
         },
         {
-            "url":"http://101.42.35.137:8080/piano.jpg",
+            "url":"https://liudi0303.cloud/piano.jpg",
             "text":"文化科技类"
         },
         ]

@@ -1,25 +1,18 @@
-// pages/list/list.js
+// pages/videoPage/videoPage.js
 Page({
+
     /**
      * 页面的初始数据
      */
     data: {
-        list:[{}],
+        src:"https://liudi0303.cloud/1.mp4",
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        this.getList((result)=>{
-            for(var i = 0;i < result.length;++i){
-                // list
-                this.setData({['list[' + i + '].userName']:result[i].name})
-                this.setData({['list[' + i + '].userFire']:result[i].fire})
-                this.setData({['list[' + i + '].userList']:i+1})
-                this.setData({['list[' + i + '].userHead']:"https://liudi0303.cloud/head.jpg"})
-            }
-        });
+
     },
 
     /**
@@ -69,17 +62,5 @@ Page({
      */
     onShareAppMessage() {
 
-    },
-
-    getList(callback){
-        wx.request({
-            url: 'https://liudi0303.cloud/getList',
-            header: {
-                'content-type': 'application/json'
-              },
-            success:function(res){
-                callback(res.data);
-            }
-          })
-    },
+    }
 })

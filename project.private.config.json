@@ -3,6 +3,8 @@
     "projectname": "wechatProject",
     "setting": {
         "compileHotReLoad": true,
-        "urlCheck": false
-    }
+        "urlCheck": true
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "libVersion": "2.31.0"
 }

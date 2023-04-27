@@ -1,0 +1,8 @@
+<!--pages/phoneSubmit/phoneSubmit.wxml-->
+<view>
+<image class = "background" src="https://liudi0303.cloud/background.png"></image>
+</view>
+
+<view class="result">
+<text>{{result}}</text>
+</view>
