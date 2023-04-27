@@ -33,11 +33,17 @@ Page({
 
         swipCurrentIndex:0,
     },
-    onLoad(){
-        this.topScroll();
-        this.getVisit((result)=>{
+    onShow(){
+        this.getPhoneNunbers((result)=>{
             this.setData({"visitCount":result})
         });
+    },
+    onLoad(){
+        this.topScroll();
+        this.getPhoneNunbers((result)=>{
+            this.setData({"visitCount":result})
+        });
+        
         
         // this.setData({"visitCount":3})
         // this.formatTime((day,hour,minute,second)=>{
@@ -115,11 +121,27 @@ Page({
           })
       },
       getPhoneNumber (e) {
-        console.log(e.detail.code)
+        var code = e.detail.code
+        console.log(code)
+        wx.request({
+            url: 'https://liudi0303.cloud/getPhoneNumber?code='+code,
+            header: {
+                'content-type': 'application/json'
+              },
+            success:function(res){
+                if(res.data == 'ok'){
+                    app.data.submitResult = '报名成功!'
+                }else{
+                    app.data.submitResult = '您已报名!'
+                }
+                wx.navigateTo({
+                    url: '/pages/phoneSubmit/phoneSubmit?data=1'
+                  })
+            }
+          })
       },
       swipclick:function(e){
         if(this.data.swipCurrentIndex == 0){
-            
             return
         }else if(this.data.swipCurrentIndex == 1){
             return
@@ -130,9 +152,9 @@ Page({
         }
     },
     //获取报名人数接口
-        getVisit:function(callback){
+        getPhoneNunbers:function(callback){
             wx.request({
-                url: 'https://liudi0303.cloud/indexVisit',
+                url: 'https://liudi0303.cloud/phoneNumbers',
                 header: {
                     'content-type': 'application/json'
                   },

@@ -1,0 +1,9 @@
+/* pages/phoneSubmit/phoneSubmit.wxss */
+
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100rpx;
+    font-size: 100rpx;
+}

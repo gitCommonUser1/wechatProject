@@ -5,10 +5,12 @@
       "pages/list/list",
       "pages/class/class",
       "pages/form/form",
-      "pages/videoPage/videoPage"
+      "pages/videoPage/videoPage",
+      "pages/phoneSubmit/phoneSubmit"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh":true,
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "攻璞艺培",
     "navigationBarTextStyle":"black"

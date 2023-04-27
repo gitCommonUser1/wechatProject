@@ -5,5 +5,6 @@
         "compileHotReLoad": true,
         "urlCheck": true
     },
-    "lazyCodeLoading": "requiredComponents"
+    "lazyCodeLoading": "requiredComponents",
+    "libVersion": "2.31.0"
 }

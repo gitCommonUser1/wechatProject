@@ -28,36 +28,5 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
-
-<<<<<<< HEAD
-
-    QNetworkAccessManager *manager = new QNetworkAccessManager(&app);
-    //manager具有异步API，当http请求完成后，会通过finished信号进行通知
-//    connect(manager,&QNetworkAccessManager::finished,&app,&MyClass::replyFinished);
-    //发送异步get请求
-    QNetworkRequest request;
-    request.setUrl(QUrl("https://liudi0303.cloud/getList"));
-    request.setRawHeader("Content-Type","application/json");
-    QNetworkReply *reply = manager->get(request);
-    QEventLoop eventLoop;
-    QObject::connect(reply, &QNetworkReply ::finished, &eventLoop, &QEventLoop::quit);
-    eventLoop.exec();
-    //处理reply信息
-    auto replyData = reply->readAll();
-    qDebug() << replyData;
-//    QJsonParseError json_error;
-//    QJsonDocument jsonDoc(QJsonDocument::fromJson(replyData, &json_error));
-//    if(json_error.error != QJsonParseError::NoError)
-//    {
-//        return -1;
-//    }
-//    QJsonObject rootObj = jsonDoc.object();
-//    QString codeStr = rootObj.value("phone").toString();
-//    qDebug() << codeStr;
-
-
-
-=======
->>>>>>> 7bc85bfffd38e34d3b90d820517d7228a9874319
     return app.exec();
 }

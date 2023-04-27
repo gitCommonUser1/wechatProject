@@ -19,6 +19,15 @@ App({
   data:{
       serverIp:'101.42.35.137',
       port:8080,
+      submitResult:'报名成功!'
+  },
+   // 下拉刷新  
+   onPullDownRefresh: function () {
+    console.log('下拉')
+    wx.startPullDownRefresh()
+    setTimeout(()=>{
+      wx.stopPullDownRefresh()
+    },2000)
   },
   //get image
   getImage:function(path){
