@@ -17,8 +17,8 @@ App({
     userInfo: null
   },
   data:{
-      serverIp:'101.42.35.137',
-      port:8080,
+      serverIp:'liudi0303.cloud',
+      port:443,
       submitResult:'报名成功!'
   },
    // 下拉刷新  
@@ -34,7 +34,7 @@ App({
       var app = getApp()
       console.log(app.data.serverIp + ':' + app.data.port)
     wx.request({
-      url: 'http://' + app.data.serverIp + ':' + app.data.port,
+      url: 'https://' + app.data.serverIp + ':' + app.data.port,
       success(res){
         // console.log(res)
         return res

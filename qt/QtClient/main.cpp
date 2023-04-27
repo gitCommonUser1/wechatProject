@@ -4,12 +4,15 @@
 #include <QDebug>
 #include "httpclient.h"
 #include "tablemodel.h"
-
+#include <QSslSocket>
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
+
+    qDebug()<<"QSslSocket="<<QSslSocket::sslLibraryBuildVersionString();
+    qDebug() << "OpenSSL支持情况:" << QSslSocket::supportsSsl();
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
