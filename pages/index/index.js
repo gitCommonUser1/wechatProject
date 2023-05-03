@@ -25,7 +25,7 @@ Page({
         visitCount:20,
         indexImageMax:10,
         //活动结束时间
-        overTime:1682870400,
+        overTime:0,
         overDay:0,
         overHour:0,
         overMinute:0,
@@ -43,7 +43,10 @@ Page({
         this.getPhoneNunbers((result)=>{
             this.setData({"visitCount":result})
         });
-        
+
+        this.getTimeOver((result)=>{
+            this.setData({"overTime":result})
+        });
         
         // this.setData({"visitCount":3})
         // this.formatTime((day,hour,minute,second)=>{
@@ -155,6 +158,18 @@ Page({
         getPhoneNunbers:function(callback){
             wx.request({
                 url: 'https://liudi0303.cloud/phoneNumbers',
+                header: {
+                    'content-type': 'application/json'
+                  },
+                success:function(res){
+                    callback(res.data);
+                }
+              })
+        },
+        //获取活动结束时间
+        getTimeOver:function(callback){
+            wx.request({
+                url: 'https://liudi0303.cloud/timeOver',
                 header: {
                     'content-type': 'application/json'
                   },
