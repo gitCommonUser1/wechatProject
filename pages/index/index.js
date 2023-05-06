@@ -43,7 +43,14 @@ Page({
         this.getPhoneNunbers((result)=>{
             this.setData({"visitCount":result})
         });
-        
+
+        this.getOverTime((result)=>{
+            this.setData({"overTime":result})
+        });
+
+        this.getNotice((result)=>{
+            this.setData({"announcementText":result})
+        });
         
         // this.setData({"visitCount":3})
         // this.formatTime((day,hour,minute,second)=>{
@@ -163,6 +170,30 @@ Page({
                 }
               })
         },
+        //获取活动结束时间
+        getOverTime:function(callback){
+            wx.request({
+                url: 'https://liudi0303.cloud/timeOver',
+                header: {
+                    'content-type': 'application/json'
+                  },
+                success:function(res){
+                    callback(res.data);
+                }
+              })
+        },
+        //获取喇叭公告
+        getNotice:function(callback){
+            wx.request({
+                url: 'https://liudi0303.cloud/notice',
+                header: {
+                    'content-type': 'application/json'
+                  },
+                success:function(res){
+                    callback(res.data);
+                }
+              })
+        },
         //获取时间戳
         formatTime:function(callback) {//newDateTime
             var date = new Date()
@@ -175,6 +206,8 @@ Page({
             //秒级时间戳
             var i = parseInt(date.getTime() / 1000);
             var t = this.data.overTime - i;
+            if(t < 0)
+                return;
             var overDate = new Date(t);
             var allSecond = overDate.getTime();
             //天

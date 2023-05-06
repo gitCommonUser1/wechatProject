@@ -10,6 +10,19 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
+    onShow(options){
+        console.log(123)
+        this.setData({list:[{}]})
+        this.getList((result)=>{
+            for(var i = 0;i < result.length;++i){
+                // list
+                this.setData({['list[' + i + '].userName']:result[i].name})
+                this.setData({['list[' + i + '].userFire']:result[i].fire})
+                this.setData({['list[' + i + '].userList']:i+1})
+                this.setData({['list[' + i + '].userHead']:"https://liudi0303.cloud/head.jpg"})
+            }
+        });
+    },
     onLoad(options) {
         this.getList((result)=>{
             for(var i = 0;i < result.length;++i){
