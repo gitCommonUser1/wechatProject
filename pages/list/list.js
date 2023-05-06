@@ -30,7 +30,7 @@ Page({
                 this.setData({['list[' + i + '].userName']:result[i].name})
                 this.setData({['list[' + i + '].userFire']:result[i].fire})
                 this.setData({['list[' + i + '].userList']:i+1})
-                this.setData({['list[' + i + '].userHead']:"https://liudi0303.cloud/head.jpg"})
+                this.setData({['list[' + i + '].userHead']:"https://liudi0303.cloud/head?"+result[i].phone})
             }
         });
     },

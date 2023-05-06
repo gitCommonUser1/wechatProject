@@ -25,7 +25,7 @@ Page({
         visitCount:20,
         indexImageMax:10,
         //活动结束时间
-        overTime:1682870400,
+        overTime:0,
         overDay:0,
         overHour:0,
         overMinute:0,
@@ -51,17 +51,6 @@ Page({
         this.getNotice((result)=>{
             this.setData({"announcementText":result})
         });
-        
-        // this.setData({"visitCount":3})
-        // this.formatTime((day,hour,minute,second)=>{
-        //     this.setData({
-        //         "overDay":day,
-        //         "overHour":hour,
-        //         "overMinute":minute,
-        //         "overSecond":second,
-        //     })
-        // })
-
         //每秒刷新时间
         var that = this;
         setInterval(function() {
